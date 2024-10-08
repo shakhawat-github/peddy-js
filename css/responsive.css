@@ -101,6 +101,42 @@
   #adopt .tab-content .tab-pane .contentbox .notfound img {
     width: 90px;
   }
+  #adopt .tab-content .tab-pane .contentbox .modal.show .details {
+    width: 60%;
+  }
+  #adopt .tab-content .tab-pane .contentbox .item .adoptimg {
+    height: 100px;
+  }
+  #adopt .tab-content .tab-pane .contentbox .item .adopttxt .adoptinfo li {
+    column-gap: 5px;
+    font-size: 10px;
+  }
+  #adopt .tab-content .tab-pane .contentbox .details p {
+    font-size: 10px;
+    line-height: 12px;
+    margin: 0;
+  }
+  #adopt .tab-content .tab-pane .contentbox .item .adopttxt .adoptinfo {
+    row-gap: 0px;
+  }
+  #adopt .tab-content .tab-pane .contentbox .item .adopttxt h4 {
+    font-size: 15px;
+  }
+  #adopt .tab-content .tab-pane .contentbox .item .adopttxt {
+    margin-top: 10px;
+}
+#adopt .tab-content .tab-pane .contentbox .item {
+  padding: 10px;
+}
+#adopt .tab-content .tab-pane .contentbox .details .detail {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+#adopt .tab-content .tab-pane .contentbox .details .dtlbtn button {
+  border-radius: 5px;
+  padding: 3px 0;
+  font-size: 12px;
+}
   /* adopt  end */
   /* footer start */
   #footer {
