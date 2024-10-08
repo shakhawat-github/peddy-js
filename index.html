@@ -17,9 +17,15 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
 
   <body>
+    <!-- loader start -->
+    <div class="mainload">
+      <div class="loader"></div>
+    </div>
+    <!-- loader end -->
     <!-- nav start -->
     <nav class="navbar navbar-expand-sm navbar-light" id="nav">
       <div class="container">
@@ -67,7 +73,7 @@
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum is that it has a.
             </p>
-            <button type="button">View More</button>
+            <a href="#adopt" type="button">View More</a>
           </div>
           <div class="image">
             <img src="images/bnrimage.png" alt="bnrimage" />
@@ -161,7 +167,30 @@
               aria-labelledby="pills-dog-tab"
               tabindex="0"
             >
-              dog
+              <div class="row contentbox">
+                <div class="col-lg-9">
+                  <div class="notfound">
+                    <img src="svg/notfound.svg" alt="notfound" />
+                    <h4>No Information Available</h4>
+                    <p>
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout. The point of using Lorem Ipsum is that it
+                      has a.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="liked">
+                    <div class="item"><img src="" alt="" /></div>
+                    <div class="item"><img src="" alt="" /></div>
+                    <div class="item"><img src="" alt="" /></div>
+                    <div class="item"><img src="" alt="" /></div>
+                    <div class="item"><img src="" alt="" /></div>
+                    <div class="item"><img src="" alt="" /></div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
               class="tab-pane fade show active"
@@ -171,9 +200,9 @@
               tabindex="0"
             >
               <div class="row contentbox">
-                <div class="col-lg-3">
+                <div class="col-xl-3 col-sm-6">
                   <div class="item">
-                    <div class="adoptimg">
+                    <div class="adoptimg adoptimg1">
                       <img src="images/adoptone.png" alt="adoptone" />
                     </div>
                     <div class="adopttxt">
@@ -202,18 +231,76 @@
                       </ul>
                     </div>
                     <div class="adoptbtn">
-                      <button type="button">
+                      <button type="button" id="like1" onclick="likeitem1()">
                         <img src="svg/like.svg" alt="like" />
                       </button>
                       <button type="button">Adopt</button>
-                      <button type="button">Details</button>
+                      <button type="button" class="detailbtn" onclick="show()">
+                        Details
+                      </button>
+                    </div>
+                  </div>
+                  <div class="modal">
+                    <div class="item details">
+                      <div class="adoptimg">
+                        <img src="images/adoptone.png" alt="adoptone" />
+                      </div>
+                      <div class="adopttxt">
+                        <h4>Mister Tartosh</h4>
+                        <ul class="adoptinfo">
+                          <li>
+                            <img src="svg/menu.svg" alt="menu" /><span
+                              >Breed: Golder retriever</span
+                            >
+                          </li>
+                          <li>
+                            <img src="svg/date.svg" alt="date" /><span
+                              >Birth: 2024</span
+                            >
+                          </li>
+                          <li>
+                            <img src="svg/gender.svg" alt="gender" /><span
+                              >Gender: Female</span
+                            >
+                          </li>
+                          <li>
+                            <img src="svg/dollar.svg" alt="dollar" /><span
+                              >Price : 199$</span
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="detail">
+                        <h5>Details Information</h5>
+                        <p>
+                          It is a long established fact that a reader will be
+                          distracted by the readable content of a page when
+                          looking at its layout.
+                        </p>
+                        <ul>
+                          <li>
+                            <p>
+                              The point of using is that it has a more-or-less
+                              normal distribution of letters, as opposed to
+                              using.
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dtlbtn">
+                        <button type="button" class="modalclose">Cancel</button>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-xl-3 col-sm-6">
                   <div class="item">
-                    <div class="adoptimg">
-                      <img src="images/adopttwo.png" alt="adopttwo" />
+                    <div class="adoptimg adoptimg2">
+                      <img
+                        src="images/adopttwo.png"
+                        alt="adopttwo"
+                        class="like2"
+                      />
                     </div>
                     <div class="adopttxt">
                       <h4>Charlie</h4>
@@ -241,17 +328,71 @@
                       </ul>
                     </div>
                     <div class="adoptbtn">
-                      <button type="button">
+                      <button type="button" id="like2">
                         <img src="svg/like.svg" alt="like" />
                       </button>
                       <button type="button">Adopt</button>
-                      <button type="button">Details</button>
+                      <button type="button" onclick="likeitem2()">
+                        Details
+                      </button>
+                    </div>
+                  </div>
+                  <div class="modal">
+                    <div class="item details">
+                      <div class="adoptimg">
+                        <img src="images/adoptone.png" alt="adoptone" />
+                      </div>
+                      <div class="adopttxt">
+                        <h4>Mister Tartosh</h4>
+                        <ul class="adoptinfo">
+                          <li>
+                            <img src="svg/menu.svg" alt="menu" /><span
+                              >Breed: Golder retriever</span
+                            >
+                          </li>
+                          <li>
+                            <img src="svg/date.svg" alt="date" /><span
+                              >Birth: 2024</span
+                            >
+                          </li>
+                          <li>
+                            <img src="svg/gender.svg" alt="gender" /><span
+                              >Gender: Female</span
+                            >
+                          </li>
+                          <li>
+                            <img src="svg/dollar.svg" alt="dollar" /><span
+                              >Price : 199$</span
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="detail">
+                        <h5>Details Information</h5>
+                        <p>
+                          It is a long established fact that a reader will be
+                          distracted by the readable content of a page when
+                          looking at its layout.
+                        </p>
+                        <ul>
+                          <li>
+                            <p>
+                              The point of using is that it has a more-or-less
+                              normal distribution of letters, as opposed to
+                              using.
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dtlbtn">
+                        <button type="button" class="modalclose">Cancel</button>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-xl-3 col-sm-6">
                   <div class="item">
-                    <div class="adoptimg">
+                    <div class="adoptimg adoptimg3">
                       <img src="images/adoptthree.png" alt="adoptthree" />
                     </div>
                     <div class="adopttxt">
@@ -280,12 +421,41 @@
                       </ul>
                     </div>
                     <div class="adoptbtn">
-                      <button type="button">
+                      <button type="button" id="like3" onclick="likeitem3()">
                         <img src="svg/like.svg" alt="like" />
                       </button>
                       <button type="button">Adopt</button>
                       <button type="button">Details</button>
                     </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-sm-6">
+                  <div class="liked">
+                    <div class="item likeitem1"></div>
+                    <div class="item likeitem2"></div>
+                    <div class="item likeitem3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-rabbit"
+              role="tabpanel"
+              aria-labelledby="pills-rabbit-tab"
+              tabindex="0"
+            >
+              <div class="row contentbox">
+                <div class="col-lg-9">
+                  <div class="notfound">
+                    <img src="svg/notfound.svg" alt="notfound" />
+                    <h4>No Information Available</h4>
+                    <p>
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout. The point of using Lorem Ipsum is that it
+                      has a.
+                    </p>
                   </div>
                 </div>
                 <div class="col-lg-3">
@@ -302,21 +472,35 @@
             </div>
             <div
               class="tab-pane fade"
-              id="pills-rabbit"
-              role="tabpanel"
-              aria-labelledby="pills-rabbit-tab"
-              tabindex="0"
-            >
-              rabbit
-            </div>
-            <div
-              class="tab-pane fade"
               id="pills-bird"
               role="tabpanel"
               aria-labelledby="pills-bird-tab"
               tabindex="0"
             >
-              bird
+              <div class="row contentbox">
+                <div class="col-lg-9">
+                  <div class="notfound">
+                    <img src="svg/notfound.svg" alt="notfound" />
+                    <h4>No Information Available</h4>
+                    <p>
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout. The point of using Lorem Ipsum is that it
+                      has a.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="liked">
+                    <div class="item"><img src="" alt="" /></div>
+                    <div class="item"><img src="" alt="" /></div>
+                    <div class="item"><img src="" alt="" /></div>
+                    <div class="item"><img src="" alt="" /></div>
+                    <div class="item"><img src="" alt="" /></div>
+                    <div class="item"><img src="" alt="" /></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <!-- nav&tabs end -->
@@ -328,7 +512,7 @@
     <footer id="footer">
       <div class="container">
         <div class="row">
-          <div class="col-lg-5">
+          <div class="col-lg-5 col-8">
             <img src="images/footlogo.png" alt="footlogo" class="footlogo" />
             <ul class="footcontact">
               <li><a href="#">Location: av. Washington 165, NY CA 54003</a></li>
@@ -351,7 +535,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-lg-2">
+          <div class="col-lg-2 col-4">
             <h4>Useful Links</h4>
             <ul class="links">
               <li><a href="#">Home </a></li>
@@ -361,12 +545,16 @@
               <li><a href="#">Contact</a></li>
             </ul>
           </div>
-          <div class="col-lg-5">
+          <div class="col-lg-5 col-12">
             <div class="message">
               <div class="abcd">
                 <h4>Drop a Message</h4>
                 <form action="#">
-                  <input type="email" placeholder="Enter your email" />
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    required="required"
+                  />
                   <button type="submit">Subscribe</button>
                 </form>
               </div>
